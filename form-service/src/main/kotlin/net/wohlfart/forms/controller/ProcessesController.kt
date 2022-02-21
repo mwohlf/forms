@@ -12,8 +12,8 @@ class ProcessesController(
 ) : ProcessesApi {
 
     override fun getProcess(
-        plantId: String, processId: String,
+        locationtId: String, processId: String,
     ): ResponseEntity<ProcessData> {
-        return processesService.getProcess(plantId, processId)
+        return processesService.getProcess(locationtId, processId)
     }
 }

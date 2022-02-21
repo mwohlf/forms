@@ -7,9 +7,9 @@ spring:
     check-template-location: false
     enabled: false
   datasource:
-    username: capture-service
+    username: form-service
     password: aak7QWDDcrM9mQnUFf9
-    url: jdbc:postgresql://localhost:5432/capture-service
+    url: jdbc:postgresql://localhost:5432/form-service
     hikari:
       auto-commit: true
   jpa:

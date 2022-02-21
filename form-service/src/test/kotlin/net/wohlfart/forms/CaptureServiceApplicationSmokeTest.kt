@@ -10,8 +10,8 @@ import org.testcontainers.junit.jupiter.Testcontainers
 @Testcontainers(disabledWithoutDocker = true)
 @ContextConfiguration(
     initializers = [
-        // this is not needed if we run with the docker-compose image
-        // PostgresInitializer::class,
+        // this is not needed if we run with the docker-compose image for postgres to check the db content
+        PostgresInitializer::class,
     ]
 )
 @ActiveProfiles("test")

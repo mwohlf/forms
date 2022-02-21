@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 @Service
 class ProcessesService {
 
-    fun getProcess(plantId: String, processId: String): ResponseEntity<ProcessData> {
+    fun getProcess(locationtId: String, processId: String): ResponseEntity<ProcessData> {
         TODO("Not yet implemented")
     }
 

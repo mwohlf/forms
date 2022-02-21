@@ -8,7 +8,7 @@ plugins {
 
 webjar {
     cache {
-        enabled = false
+        enabled = true
     }
 }
 

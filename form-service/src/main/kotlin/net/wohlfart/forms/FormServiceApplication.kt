@@ -6,8 +6,8 @@ import org.springframework.boot.runApplication
 
 @SpringBootApplication
 @EnableConfigurationProperties(FormServiceProperties::class)
-class CaptureApplication
+class FormServiceApplication
 
 fun main(args: Array<String>) {
-	runApplication<CaptureApplication>(*args)
+	runApplication<FormServiceApplication>(*args)
 }

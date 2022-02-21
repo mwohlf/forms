@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "antlr4ts-build": "mkdirp src/generated && cd ../etc/grammar && antlr4ts ProcessDataForm.g4 -visitor -o ../../form-reactive/src/generated",
+    "antlr4ts-form-build": "mkdirp src/generated && cd ../etc/grammar && antlr4ts ProcessDataForm.g4 -visitor -o ../../form-reactive/src/generated",
+    "antlr4ts-expression-build": "mkdirp src/generated && cd ../etc/grammar && antlr4ts ExpressionValue.g4 -visitor -o ../../form-reactive/src/generated",
     "start": "react-scripts start",
     "prebuild": "mkdirp src/generated && cd ../etc/grammar && antlr4ts ProcessDataForm.g4 -visitor -o ../../form-reactive/src/generated",
     "build": "react-scripts build",

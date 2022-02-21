@@ -48,10 +48,16 @@ isCloneable // last terminal must be the flag for parsing
 // ---------------  specific input fields   ---------------
 
 
+// order matters here!
 dataWidget
    : ( '"widgetType"' ':' INPUT_WIDGET_TYPE )
      ( ',' dataType )
      ( ',' label )
+     ( ',' value )?
+     ( ',' minValue )?
+     ( ',' maxValue )?
+     ( ',' regexPattern )?
+     ( ',' expression )?
    ;
 
 dataType
@@ -59,19 +65,43 @@ dataType
    ;
 
 label
-   : '"label"' ':' labelString
+   : '"label"' ':' labelString // plain ascii
    ;
 
+expression
+   : '"expression"' ':' TEXT_STRING
+   ;
+
+value
+   : '"value"' ':' TEXT_STRING
+   ;
+
+minValue
+   : '"minValue"' ':' TEXT_STRING
+   ;
+
+maxValue
+   : '"maxValue"' ':' TEXT_STRING
+   ;
+
+regexPattern
+   : '"regexValue"' ':' TEXT_STRING
+   ;
+
+// list all strings and keywords here
 labelString
-   : ( STRING | ID_STRING)
+   : TEXT_STRING
+   | ID_STRING
+   | GROUP_ELEMENTS_LABEL
+   | WIDGET_TYPE
+   | INPUT_WIDGET_TYPE
    ;
-
-
 
 
 // ---------------- terminal symbols
 
 // order this be most specific to less
+
 
 GROUP_ELEMENTS_LABEL
    : '"elements"'
@@ -92,17 +122,16 @@ INPUT_WIDGET_TYPE
    | '"Tickbox"'
    ;
 
-
+INDENTIFIER : [a-zA-Z][a-zA-Z0-9]* ;
 
 // only ascii, no ':' '/' '#' '-'
 ID_STRING
-   : '"' CHAR (ASCII)+ '"'
+   : '"' INDENTIFIER '"'
    ;
 
-STRING
+TEXT_STRING
    : '"' (ESC | SAFECODEPOINT)* '"'
    ;
-
 
 fragment CHAR
    : [a-zA-Z]
@@ -136,7 +165,7 @@ NUMBER
    ;
 
 
-fragment INT
+INT
    : '0' | [1-9] [0-9]*
    ;
 

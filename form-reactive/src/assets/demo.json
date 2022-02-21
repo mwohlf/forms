@@ -7,13 +7,22 @@
       "dataId": "workorder",
       "widgetType": "TextInput",
       "dataType": "string",
-      "label": "Label 1 first field"
+      "label": "Label 1 first field",
+      "value": "text here"
     },
     {
       "dataId": "machine",
+      "widgetType": "TextInput",
+      "dataType": "string",
+      "label": "Label 1 first field",
+      "expression": "$.workorder[0]"
+    },
+    {
+      "dataId": "machine2",
       "widgetType": "BarCodeScan",
       "dataType": "string",
       "label": "Label 1 first field",
+      "expression": "$.workorder[0]",
       "cloneable": true
     },
     {
@@ -47,7 +56,8 @@
           "dataId": "puk",
           "widgetType": "QRCodeScan",
           "dataType": "string",
-          "label": "Label 2"
+          "label": "Label 2",
+          "value": "text here too"
         },
         {
           "dataId": "height",

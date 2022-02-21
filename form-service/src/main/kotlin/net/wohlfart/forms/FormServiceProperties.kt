@@ -8,5 +8,5 @@ import org.springframework.boot.context.properties.ConstructorBinding
 @ConfigurationProperties(prefix = "net.wohlfart.forms")
 class FormServiceProperties(
 
-    val processDataFormDir: String,
+    val dataDir: String,
 )

@@ -28,13 +28,13 @@ class ApplicationStartupListener(
         logger.info { "------------------" }
         logger.info { "buildProperties.time: ${buildProperties.time}" }
         logger.info { "buildProperties.version: ${buildProperties.version}" }
-        logger.info { "processDataFormDir: ${formServiceProperties.processDataFormDir}" }
+        logger.info { "processDataFormDir: ${formServiceProperties.dataDir}" }
         logger.info { "dataSourceProperties.username: ${dataSourceProperties.username}" }
         logger.info { "dataSourceProperties.url: ${dataSourceProperties.url}" }
         logger.info { "--------------------------------------------" }
 
 
-        ClassPathResource(formServiceProperties.processDataFormDir).file.listFiles()?.forEach {
+        ClassPathResource(formServiceProperties.dataDir).file.listFiles()?.forEach {
             processRepository.save(
                 ProcessDataEntity(
                 processId = it.name,

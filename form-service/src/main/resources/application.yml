@@ -11,9 +11,9 @@ spring:
     check-template-location: false
     enabled: false
   datasource:
-    username: capture-service  # SPRING_DATASOURCE_USERNAME
+    username: form-service  # SPRING_DATASOURCE_USERNAME
     password: aak7QWDDcrM9mQnUFf9
-    url: jdbc:postgresql://localhost:5432/capture-service
+    url: jdbc:postgresql://localhost:5432/form-service
     hikari:
       auto-commit: true
   jpa:
@@ -46,4 +46,4 @@ management:
 net:
   wohlfart:
     forms:
-      forms-data-form-dir: "forms-data"
+      data-dir: "forms-data"

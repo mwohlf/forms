@@ -24,14 +24,14 @@ kotlin {
 }
 
 springBoot {
-    buildInfo()  // to creaet the buildINfo object
+    buildInfo()  // to create the buildInfo object
 }
 
 val openApiGenerate = tasks.withType<GenerateTask> {
     val generatedSourcesDir = project.layout.buildDirectory.dir("generated-sources").get()
     val ignoreOverride = project.layout.projectDirectory.file(".openapi-generator-ignore").asFile
     outputDir.set(generatedSourcesDir.asFile.path)
-    inputSpec.set(rootProject.layout.projectDirectory.file("etc/api/capture-service.yml").asFile.path)
+    inputSpec.set(rootProject.layout.projectDirectory.file("etc/api/forms-service.yml").asFile.path)
     ignoreFileOverride.set(ignoreOverride.path)
     modelPackage.set("net.wohlfart.forms.model")
     apiPackage.set("net.wohlfart.forms.api")

@@ -1,13 +1,18 @@
 import { CharStreams, CommonTokenStream } from "antlr4ts";
-import React, { FunctionComponent, ReactElement, useState } from "react";
+import React, {FunctionComponent, ReactElement, useMemo, useState} from "react";
 import { ProcessDataFormLexer } from "./generated/ProcessDataFormLexer";
 import { ProcessDataFormContext, ProcessDataFormParser } from "./generated/ProcessDataFormParser";
 import { FormRenderer } from "./util/FormRenderer";
+import {Button, useTheme} from "@material-ui/core";
+import {ParseTree} from "antlr4ts/tree";
 
 
 const demo = require('./assets/demo.json');
 
+
+
 export const FormScreen: FunctionComponent = (): ReactElement => {
+    const theme = useTheme();
 
     let inputStream = CharStreams.fromString(JSON.stringify(demo));
     // Create the lexer and parser
@@ -18,22 +23,21 @@ export const FormScreen: FunctionComponent = (): ReactElement => {
     // ProcessDataFormContext
     let tree = parser.processDataForm();
 
-
-    const [, updateState] = React.useState<{}>();
-    const forceUpdate = React.useCallback(() => updateState({}), []);
-
-    const [parseTree, setParseTree] = useState<ProcessDataFormContext>(tree);
-    const [renderer, setRenderer] = useState<FormRenderer>(new FormRenderer(forceUpdate));
-
+    // The setState function is used to update the state.
+    // It accepts a new state value and enqueues a re-render of the component.
+    const [formState, setFormState] = useState({});
+    const renderer = useMemo<FormRenderer>(() => new FormRenderer(setFormState, theme), [theme]);
 
     return (
-        <div className="App">{
-            parseTree ? (
-                renderer.visit(parseTree)
-            ) : (
-                <></>
-            )
-        }</div>
+        <div className="App">
+            {
+                tree ? (
+                    renderer.visit(tree)
+                ) : (
+                    <></>
+                )
+            }
+        </div>
     );
 };
 

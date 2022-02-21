@@ -3,11 +3,19 @@
 This is a gradle based multi-module project, 
 requirements are:
 - git for project checkout
-- java version 11
+- java version 11 for compile and run
+- docker compose to boot the database
 - chrome browser for UI tests
-everything should run out of the box after checkout by using the commands:
+everything should run out of the box after 
+- checkout 
+- booting a database from the compose file in /etc
+- then using the commands:
 ```
 ./gradlew clean build bootRun
+```
+and open
+```
+http://localhost:8080/admin-console/index.html
 ```
 
 **to reset the project to the checkout state**
@@ -17,7 +25,8 @@ everything should run out of the box after checkout by using the commands:
 
 
 ## form-service
-Implementing the backend service for providing for render data and retrieving the forms data.
+Implementing the backend service for providing the render data for the forms 
+and retrieving the form content.
 
 
 ## form-reactive

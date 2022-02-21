@@ -10,17 +10,17 @@ services:
     ports:
       - "5432:5432"
     networks:
-      - capture-network
+      - forms-network
     environment:
-      - POSTGRES_USER=capture-service
+      - POSTGRES_USER=form-service
       - POSTGRES_PASSWORD=aak7QWDDcrM9mQnUFf9
-      - POSTGRES_DB=capture-service
+      - POSTGRES_DB=form-service
     healthcheck:
-      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "capture-service" ]
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "form-service" ]
       interval: 25s
       timeout: 2s
       retries: 5
 
 networks:
-  capture-network:
-    name: capture-network
+  forms-network:
+    name: forms-network

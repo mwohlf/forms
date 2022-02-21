@@ -1,0 +1,69 @@
+[
+  {
+    "processName" : "bla"
+  },
+  [
+    {
+      "dataId": "workorder",
+      "widgetType": "TextInput",
+      "dataType": "string",
+      "label": "Label 1 first field"
+    },
+    {
+      "dataId": "machine",
+      "widgetType": "BarCodeScan",
+      "dataType": "string",
+      "label": "Label 1 first field",
+      "cloneable": true
+    },
+    {
+      "widgetType": "HorizontalRow"
+    },
+    {
+      "dataId": "MachineId",
+      "widgetType": "QRCodeScan",
+      "dataType": "string",
+      "label": "Label 1",
+      "cloneable": true
+    },
+    {
+      "widgetType": "SectionTitle",
+      "label": "Section Title"
+    },
+    {
+      "dataId": "puk",
+      "widgetType": "QRCodeScan",
+      "dataType": "string",
+      "label": "Label 2"
+    },
+    {
+      "widgetType": "SubSectionTitle",
+      "label": "SubSectionTitle"
+    },
+    {
+      "dataId": "group",
+      "elements": [
+        {
+          "dataId": "puk",
+          "widgetType": "QRCodeScan",
+          "dataType": "string",
+          "label": "Label 2"
+        },
+        {
+          "dataId": "height",
+          "widgetType": "QRCodeScan",
+          "dataType": "string",
+          "label": "Label 3",
+          "cloneable": true
+        },
+        {
+          "dataId": "width",
+          "widgetType": "QRCodeScan",
+          "dataType": "string",
+          "label": "Label 4"
+        }
+      ],
+      "cloneable": true
+    }
+  ]
+]

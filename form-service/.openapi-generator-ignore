@@ -1,0 +1,9 @@
+# OpenAPI Generator Ignore
+# contains files that don't need to be generated
+
+**/build.gradle.kts
+**/pom.xml
+**/README.md
+**/settings.gradle
+**/.openapi-generator-ignore
+**/.openapi-generator

@@ -1,0 +1,2405 @@
+[
+  {
+    "processId": "SUBSTRATE_PREPARATION",
+    "processDescription": "Substrate preparation",
+    "processDataList": [
+      {
+        "id": "cleaning",
+        "label": "Cleaning",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "AUTO",
+            "displayFields": [
+              {
+                "id": "mc_no",
+                "label": "US Clean Mc No.",
+                "type": "QRCODE",
+                "isMultiParameter": false
+              },
+              {
+                "id": "us_cleaning_program",
+                "label": "US Clean Program",
+                "type": "BARCODE",
+                "isMultiParameter": false
+              }
+            ]
+          },
+          {
+            "value": "MANUAL",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basePlateId",
+        "label": "Base Plate (Batch No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "plate4041Id",
+        "label": "40/41 Plate (Batch No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "plate4243Id",
+        "label": "42/43 Plate (Batch No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "plate44445Id",
+        "label": "44/45 Plate (Batch No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "nonCoatedPlateId",
+        "label": "Non Coated Plate (Batch No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "topPlateId",
+        "label": "Top Plate (Batch No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "prepareSubstrate",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "PLASMA_1",
+    "processDescription": "Plasma-1",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "Mc No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "plasma_program",
+        "label": "Program",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "plasma",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "SILANIZATION_1",
+    "processDescription": "Silanization/Pre-treatment-1",
+    "processDataList": [
+      {
+        "id": "silanization_performed",
+        "label": "Silanization_Performed",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "silanize",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "STACKING",
+    "processDescription": "Stack Cementing & Pressing",
+    "processDataList": [
+      {
+        "id": "uc_glue_exp_checked",
+        "label": "UV Glue Expiry (checked)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "mc_no",
+        "label": "MC No",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "stacking_program",
+        "label": "Program",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "cavity_no",
+        "label": "Cavity No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "stack_cosmetics",
+        "label": "Stack Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "IO - inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "trayId",
+        "label": "Tray No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "stack",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "GRINDING",
+    "processDescription": "Reference Grinding",
+    "processDataList": [
+      {
+        "id": "angle_90",
+        "label": "90⁰ angle (<5’)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "width",
+        "label": "Width (>53.5mm)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Tray No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "grind",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "SAW_CEMENTING",
+    "processDescription": "Wire Saw Stack Cementing",
+    "processDataList": [
+      {
+        "id": "angle_24",
+        "label": "24.5⁰ angle(+5’~-5’)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "row_1",
+              "label": "Row 1",
+              "type": "STRING"
+            },
+            {
+              "id": "row_2",
+              "label": "Row 2",
+              "type": "STRING"
+            }
+          ]
+        }
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "trayId",
+        "label": "Tray No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "jigId",
+        "label": "Jig No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "requestInfo": {
+      "function": "sawCement",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "WIRE_SAWING",
+    "processDescription": "Wire Sawing",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "MC No",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "alignment_inspection",
+        "label": "90⁰ alignment In spec.(< 3’)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "mc_setting_confirmed",
+        "label": "Mc setting confirmed",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "process_abnormality",
+        "label": "Process Abnormality",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          },
+          {
+            "value": "N",
+            "displayFields": [
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Jig No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "requestInfo": {
+      "function": "saw",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "SAW_D_CEMENTING",
+    "processDescription": "Wire Saw Slice D-Cementing",
+    "processDataList": [
+      {
+        "id": "angle_24",
+        "label": "24.5⁰ angle (+10’~-10’)",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "thickness",
+        "label": "Thickness (mm)",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "stack_cosmetics",
+        "label": "Stack Cosmetics Good?",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "jigId",
+        "label": "Jig No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "slicePlacements",
+        "option": [],
+        "isMultiParameter": true,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": false,
+          "fields": [
+            {
+              "id": "jigCavityId",
+              "label": "Jig Cavity No.",
+              "type": "NUMBER"
+            },
+            {
+              "id": "trayId",
+              "label": "Tray No.",
+              "type": "QRCODE"
+            },
+            {
+              "id": "trayCavityFrom",
+              "label": "Tray Cavity No. (From)",
+              "type": "STRING"
+            },
+            {
+              "id": "trayCavityTo",
+              "label": "Tray Cavity No. (To)",
+              "type": "STRING"
+            }
+          ]
+        }
+      }
+    ],
+    "requestInfo": {
+      "function": "sawDCement",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "TRIMMING",
+    "processDescription": "Trimming",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "Mc No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "program",
+        "label": "Program",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "length",
+        "label": "Length(mm)",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "width",
+        "label": "Width(mm)",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "stack_cosmetics",
+        "label": "Stack Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "IO - inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Tray No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "trim",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "CHAMFERING",
+    "processDescription": "Slice Chamfering",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "US Clean Mc No.",
+        "type": "QRCODE",
+        "isMultiParameter": false
+      },
+      {
+        "id": "chamfer_size",
+        "label": "Chamfer Size0.2~0.5mm",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "inputContainerId",
+        "label": "Tray No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "outputContainerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "chamfer",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "DS_LAPPING_1",
+    "processDescription": "DS Lapping-1",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "Mc No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "coolant_density",
+        "label": "Coolant density (5% Brix)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "table_flatness",
+        "label": "Table flatness (<5u)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "table_dressing",
+        "label": "Table Dressing",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      },
+      {
+        "id": "program",
+        "label": "Program No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "ttv",
+        "label": "Thickness (1.520 ± 0.010mm)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "VARIATION",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "thickness_1",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_2",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_3",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_4",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_5",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slice_cosmetics",
+        "label": "Slice Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "lapp",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "DS_POLISHING_1",
+    "processDescription": "DS Polishing-1",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "Mc No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "slurry_density",
+        "label": "Slurry density (1.04±0.005g/cm³)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "table_flatness",
+        "label": "Table flatness (<2u)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "table_dressing",
+        "label": "Table Dressing",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      },
+      {
+        "id": "program",
+        "label": "Program No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "ttv",
+        "label": "Thickness (1.470 ± 0.010mm)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "VARIATION",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "thickness_1",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_2",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_3",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_4",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_5",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slice_cosmetics",
+        "label": "Slice Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      },
+      {
+        "id": "cleaning",
+        "label": "Cleaning",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "AUTO",
+            "displayFields": [
+              {
+                "id": "mc_no",
+                "label": "US Clean Mc No.",
+                "type": "QRCODE",
+                "isMultiParameter": false
+              },
+              {
+                "id": "us_cleaning_program",
+                "label": "US Clean Program",
+                "type": "BARCODE",
+                "isMultiParameter": false
+              }
+            ]
+          },
+          {
+            "value": "MANUAL",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "polish",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "QC_SLICE",
+    "processDescription": "QC Slice",
+    "processDataList": [
+      {
+        "id": "cavity_no",
+        "label": "Cavity No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "ttv",
+        "label": "TTV (um)",
+        "type": "NUMBER",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "irr",
+        "label": "IRR  (<2fr)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "irr_front",
+              "label": "Front(<2fr)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "irr_back",
+              "label": "Back(<2fr)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sagitta",
+        "label": "Sagitta  (<2fr)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "sagitta_front",
+              "label": "Front(<2fr)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "sagitta_back",
+              "label": "Back(<2fr)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slice_cosmetics",
+        "label": "Slice Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "control",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "SLICE_PREPARATION",
+    "processDescription": "Cover Plate & Slice Preparation",
+    "processDataList": [
+      {
+        "id": "cleaning",
+        "label": "Cleaning",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "AUTO",
+            "displayFields": [
+              {
+                "id": "mc_no",
+                "label": "US Clean Mc No.",
+                "type": "QRCODE",
+                "isMultiParameter": false
+              },
+              {
+                "id": "us_cleaning_program",
+                "label": "US Clean Program",
+                "type": "BARCODE",
+                "isMultiParameter": false
+              }
+            ]
+          },
+          {
+            "value": "MANUAL",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketId",
+        "label": "Basket No. (Type2)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketPlacements",
+        "label": "Basket No. (Type3)",
+        "option": [],
+        "isMultiParameter": true,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": false,
+          "fields": [
+            {
+              "id": "basketId",
+              "type": "QRCODE"
+            },
+            {
+              "id": "sliceFrom",
+              "label": "Slice (From)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "sliceTo",
+              "label": "Slice (To)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "coverPlateId",
+        "label": "Cover Plate (Batch No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "requestInfo": {
+      "function": "prepareSlice",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "PLASMA_2",
+    "processDescription": "Plasma-2",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "Mc No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "plasma_program",
+        "label": "Program",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "plasma",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "SILANIZATION_2",
+    "processDescription": "Silanization/Pre-treatment-2",
+    "processDataList": [
+      {
+        "id": "silanization_performed",
+        "label": "Silanization_Performed",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "silanize",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "PLATE_PRESSING",
+    "processDescription": "Cover Plate CMT & PRESS",
+    "processDataList": [
+      {
+        "id": "uc_glue_exp_checked",
+        "label": "UV Glue Expiry (checked)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "mc_no",
+        "label": "MC No",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "stacking_program",
+        "label": "Program",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "stack_cosmetics",
+        "label": "Stack Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketId",
+        "label": "Basket No. (Type2)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketPlacements",
+        "option": [],
+        "isMultiParameter": true,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": false,
+          "fields": [
+            {
+              "id": "basketId",
+              "type": "QRCODE"
+            },
+            {
+              "id": "sliceFrom",
+              "label": "Cavity (From)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "sliceTo",
+              "label": "Cavity (To)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "requestInfo": {
+      "function": "stackCoverPlate",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "SANDWICH_CHAMFERING",
+    "processDescription": "Sandwich Chamfering",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "MC No",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "chamfer_size",
+        "label": "Chamfer Size0.2~0.5mm",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "sandwichChamfer",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "DS_LAPPING_2",
+    "processDescription": "DS Lapping-2",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "Mc No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "coolant_density",
+        "label": "Coolant density (5% Brix)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "table_flatness",
+        "label": "Table flatness (<5u)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "table_dressing",
+        "label": "Table Dressing",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      },
+      {
+        "id": "program",
+        "label": "Program No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "ttv",
+        "label": "Thickness (1.80 ± 0.01mm)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "VARIATION",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "thickness_1",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_2",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_3",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_4",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_5",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slice_cosmetics",
+        "label": "Slice Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "lapp",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "DS_POLISHING_2",
+    "processDescription": "DS Polishing-2",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "Mc No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "slurry_density",
+        "label": "Slurry density (1.04±0.005g/cm³)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "table_flatness",
+        "label": "Table flatness (<2u)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "table_dressing",
+        "label": "Table Dressing",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      },
+      {
+        "id": "program",
+        "label": "Program No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "ttv",
+        "label": "Thickness (1.74~1.75mm)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "VARIATION",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "thickness_1",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_2",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_3",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_4",
+              "type": "NUMBER"
+            },
+            {
+              "id": "thickness_5",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slice_cosmetics",
+        "label": "Slice Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      },
+      {
+        "id": "cleaning",
+        "label": "Cleaning",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "AUTO",
+            "displayFields": [
+              {
+                "id": "mc_no",
+                "label": "US Clean Mc No.",
+                "type": "QRCODE",
+                "isMultiParameter": false
+              },
+              {
+                "id": "us_cleaning_program",
+                "label": "US Clean Program",
+                "type": "BARCODE",
+                "isMultiParameter": false
+              }
+            ]
+          },
+          {
+            "value": "MANUAL",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "polish",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "QC_SANDWICH",
+    "processDescription": "QC Sandwich",
+    "processDataList": [
+      {
+        "id": "cavity_no",
+        "label": "Cavity No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "ttv",
+        "label": "TTV (um)",
+        "type": "NUMBER",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "irr",
+        "label": "IRR (<2fr)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "irr_front",
+              "label": "Front(<2fr)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "irr_back",
+              "label": "Back(<2fr)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "sagitta",
+        "label": "Sagitta (<2fr)",
+        "option": [],
+        "isMultiParameter": false,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": true,
+          "fields": [
+            {
+              "id": "sagitta_front",
+              "label": "Front(<2fr)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "sagitta_back",
+              "label": "Back(<2fr)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      },
+      {
+        "id": "slice_cosmetics",
+        "label": "Slice Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "control",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "F_JIG_CEMENTING",
+    "processDescription": "F-Jig Cementing",
+    "processDataList": [],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketId",
+        "label": "Basket No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "jigPlacements",
+        "option": [],
+        "isMultiParameter": true,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": false,
+          "fields": [
+            {
+              "id": "jigId",
+              "label": "Jig No.",
+              "type": "NUMBER"
+            },
+            {
+              "id": "basketCavityFrom",
+              "label": "Basket Cavity No. (From)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "basketCavityTo",
+              "label": "Basket Cavity No. (To)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "requestInfo": {
+      "function": "fJigCement",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "F_GRINDING",
+    "processDescription": "F-Grinding",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "MC No",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "mc_zero_set",
+        "label": "Mc Zero Set",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "mc_setting",
+        "label": "Mc Setting",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "cutter_chamfer",
+        "label": "Cutter Chamfer",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "cutting_height",
+        "label": "Cutting Height (mm)",
+        "type": "NUMBER",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "grinding_surface",
+        "label": "Grinding Surface (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Jig Set No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "grind",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "F_POLISHING",
+    "processDescription": "F-Polishing",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "Mc No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "slurry_density",
+        "label": "Slurry density (1.04±0.5g/cm³)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "dresser_flatness",
+        "label": "Dresser flatness (0~-1)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "removal",
+        "label": "Removal (30~-35um)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "final_height",
+        "label": "Final Height (mm)",
+        "type": "NUMBER",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "irr",
+        "label": "IRR (>5fr)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "sagitta",
+        "label": "Sagitta (>5fr)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "polishing_surface",
+        "label": "Polisishing Surface (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Jig Set No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "polish",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "F_JIG_D_CEMENTING",
+    "processDescription": "F-Jig D-Cementing",
+    "processDataList": [
+      {
+        "id": "cavity_no",
+        "label": "Cavity No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "angle",
+        "label": "25.17⁰ angle (+10’~-10’)",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketId",
+        "label": "Basket No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "jigPlacements",
+        "option": [],
+        "isMultiParameter": true,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": false,
+          "fields": [
+            {
+              "id": "jigId",
+              "label": "Jig No.",
+              "type": "NUMBER"
+            },
+            {
+              "id": "basketCavityFrom",
+              "label": "Basket Cavity No. (From)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "basketCavityTo",
+              "label": "Basket Cavity No. (To)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "requestInfo": {
+      "function": "fJigDCement",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "SHAPING",
+    "processDescription": "Shaping",
+    "processDataList": [
+      {
+        "id": "mc_no",
+        "label": "MC No",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "program",
+        "label": "Program No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "visual_cosmetics",
+        "label": "Visual Cosmetics (No abnormality)",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "Y",
+            "displayFields": []
+          },
+          {
+            "value": "N",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "inputContainerId",
+        "label": "Input - Basket No. (Type 4)",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "outputContainerId",
+        "label": "Output - Basket No. (Type 5)",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "chamfer",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "FINAL_QC_MEASUREMENT_1",
+    "processDescription": "Final QC-Measurement 1",
+    "processDataList": [
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "measurements",
+        "option": [],
+        "isMultiParameter": true,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": false,
+          "fields": [
+            {
+              "id": "cavity",
+              "label": "Cavity No.",
+              "type": "NUMBER"
+            },
+            {
+              "id": "facetWidthToF",
+              "label": "Facet Width to F (9.13±0.4)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "angle",
+              "label": "Angle 90⁰ ± 0.167",
+              "type": "NUMBER"
+            },
+            {
+              "id": "fWidth",
+              "label": "F width (3.7 -0.3)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "lengthToF",
+              "label": "Length to F (38.70±0.23)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "loeWidth",
+              "label": "LOE width (44.0±0.1)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "facetParallelism",
+              "label": "Facet Parallelism(≤ 0.167⁰)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "finalMeasure",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "FINAL_QC_MEASUREMENT_2",
+    "processDescription": "Final QC-Measurement 2",
+    "processDataList": [    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "containerId",
+        "label": "Basket No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "measurements",
+        "option": [],
+        "isMultiParameter": true,
+        "type": "GROUP",
+        "group": {
+          "sendFlat": false,
+          "fields": [
+            {
+              "id": "cavity",
+              "label": "Cavity No.",
+              "type": "NUMBER"
+            },
+            {
+              "id": "mtf",
+              "label": "MTF % (> 37%)",
+              "type": "NUMBER"
+            },
+            {
+              "id": "histo",
+              "label": "Histo % (< 7%)",
+              "type": "NUMBER"
+            }
+          ]
+        }
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "finalMeasure",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "FINAL_QC_INSPECTION",
+    "processDescription": "Final QC-Cosmetic Insp",
+    "processDataList": [
+      {
+        "id": "cavity_no",
+        "label": "Cavity No.",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "cosmetic_level",
+        "label": "Cosmetic Level",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "PASS",
+            "displayFields": [
+              {
+                "id": "packing_tray_cavity_no",
+                "label": "Packing Tray Cavity No.",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          },
+          {
+            "value": "FAIL",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderId",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "basketId",
+        "label": "Basket No. (Type 4)",
+        "type": "STRING",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "packingTrayId",
+        "label": "Packing Tray No. (PO No. & Tray No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "finalControl",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "QA",
+    "processDescription": "QA",
+    "processDataList": [
+      {
+        "id": "cosmetic_evaluation",
+        "label": "Cosmetic Evaluation",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "PASS",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          },
+          {
+            "value": "FAIL",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      },
+      {
+        "id": "measurement_evaluation",
+        "label": "Measurement Evaluation",
+        "type": "OPTIONS",
+        "option": [
+          {
+            "value": "PASS",
+            "displayFields": [
+              {
+                "id": "remark",
+                "label": "Remark",
+                "type": "STRING",
+                "isMultiParameter": false
+              }
+            ]
+          },
+          {
+            "value": "FAIL",
+            "displayFields": []
+          }
+        ],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderIds",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": true
+      },
+      {
+        "id": "packingTrayId",
+        "label": "Packing Tray No. (PO No. & Tray No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "qaControl",
+      "method": "PUT"
+    }
+  },
+  {
+    "processId": "PACKING",
+    "processDescription": "Packing",
+    "processDataList": [
+      {
+        "id": "actual_tray_vs_label_qty",
+        "label": "Actual Tray vs Label Qty",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "sap_label_onc_ctn_box",
+        "label": "SAP Label on Ctn Box (x 2 pieces)",
+        "type": "TICKBOX",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "inputParameter": [
+      {
+        "id": "workOrderIds",
+        "label": "WO No.",
+        "type": "BARCODE",
+        "option": [],
+        "isMultiParameter": true
+      },
+      {
+        "id": "packingTrayId",
+        "label": "Packing Tray No. (PO No. & Tray No.)",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      },
+      {
+        "id": "sapLabelId",
+        "label": "SAP Label No.",
+        "type": "QRCODE",
+        "option": [],
+        "isMultiParameter": false
+      }
+    ],
+    "printResult": false,
+    "requestInfo": {
+      "function": "pack",
+      "method": "PUT"
+    }
+  }
+]

@@ -1,0 +1,49 @@
+
+server:
+  port: 8080  # you can override this with SERVER_PORT
+  error:
+    path: "/error"
+
+spring:
+  application:
+    name: admin-console
+  mustache:
+    check-template-location: false
+    enabled: false
+  datasource:
+    username: capture-service  # SPRING_DATASOURCE_USERNAME
+    password: aak7QWDDcrM9mQnUFf9
+    url: jdbc:postgresql://localhost:5432/capture-service
+    hikari:
+      auto-commit: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    properties:
+      hibernate:
+        types:
+          print:
+            banner: false
+
+management:
+  server:
+    port: 8081
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: ${MANAGEMENT_EXPOSED_ENDPOINTS:health,prometheus}
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+
+net:
+  wohlfart:
+    forms:
+      forms-data-form-dir: "forms-data"

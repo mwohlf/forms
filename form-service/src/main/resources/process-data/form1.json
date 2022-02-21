@@ -1,0 +1,19 @@
+[
+  {
+    "fieldId": "workorder",
+    "inputType": "QRCodeScan"
+  },
+  {
+    "groupId": "workorder",
+    "elements": [
+      {
+        "fieldId": "workorder",
+        "inputType": "QRCodeScan"
+      },
+      {
+        "fieldId": "workorder",
+        "inputType": "QRCodeScan"
+      }
+    ]
+  }
+]

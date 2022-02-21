@@ -1,0 +1,26 @@
+version: '2.1'
+
+services:
+
+  postgres:
+    image: postgres:14.2-alpine
+    mem_limit: 300m
+    container_name: postgres
+    user: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - capture-network
+    environment:
+      - POSTGRES_USER=capture-service
+      - POSTGRES_PASSWORD=aak7QWDDcrM9mQnUFf9
+      - POSTGRES_DB=capture-service
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "postgres", "-U", "capture-service" ]
+      interval: 25s
+      timeout: 2s
+      retries: 5
+
+networks:
+  capture-network:
+    name: capture-network

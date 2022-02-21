@@ -1,0 +1,11 @@
+type: object
+required:
+  - code
+  - message
+properties:
+  code:
+    $ref: ./ErrorCode.yml
+  message:
+    type: string
+    description: description of what has happened
+    example: id could not be found

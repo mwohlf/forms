@@ -1,0 +1,20 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+.DS_Store
+Thumbs.db
+
+# dirs we don't want pushed
+**/.node/
+**/.gradle/
+**/.idea/
+**/.angular/
+**/node_modules/
+**/build/
+**/dist/
+**/src/generated/
+
+
+# idea project files
+*.iml
+*.ipr
+*.iws

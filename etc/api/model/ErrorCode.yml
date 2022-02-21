@@ -1,0 +1,8 @@
+type: string
+description: specifies the kind of error that has occurred
+enum:
+  - ID_NOT_FOUND
+  - NETWORK_TIMEOUT
+  - ERROR
+example: NETWORK_TIMEOUT
+default: ERROR

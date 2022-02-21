@@ -1,0 +1,10 @@
+[
+  [
+    {
+      "elementId": "workorder",
+      "inputWidget": "QRCodeScan",
+      "dataType": "string",
+      "multi": true
+    }
+  ]
+]

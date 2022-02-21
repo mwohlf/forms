@@ -1,0 +1,18 @@
+type: object
+required:
+  - processId
+  - processName
+  - processRevision
+  - processDescription
+  - processDetails
+properties:
+  processId:
+    type: string
+  processName:
+    type: string
+  processRevision:
+    type: string
+  processDescription:
+    type: string
+  processDetails:
+    type: string

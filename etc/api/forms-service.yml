@@ -1,0 +1,69 @@
+openapi: 3.0.1
+info:
+    title: MIPS - Capture
+    description: MIPS - Capture
+    license:
+        name: 'MIT - Licence'
+        url: https://opensource.org/licenses/MIT
+    version: v1
+servers:
+    - url: http://localhost:8080
+      description: Generated server url
+
+paths:
+    /{plantId}/v1/processes/{processId}:
+        get:
+            tags:
+                - Processes
+            description: Get a process by id
+            operationId: getProcess
+            parameters:
+                - name: locationtId
+                  in: path
+                  description: Location Id
+                  required: true
+                  schema:
+                      type: string
+                - name: processId
+                  in: path
+                  description: Process Id
+                  required: true
+                  schema:
+                      type: string
+            responses:
+                "200":
+                    description: success
+                    content:
+                        application/json:
+                            schema:
+                                $ref: ./model/ProcessData.yml
+                "400":
+                    description: bad request
+                    content:
+                        application/json:
+                            schema:
+                                $ref: ./model/Error.yml
+                "401":
+                    description: not authenticated
+                    content:
+                        application/json:
+                            schema:
+                                $ref: ./model/Error.yml
+                "403":
+                    description: forbidden
+                    content:
+                        application/json:
+                            schema:
+                                $ref: ./model/Error.yml
+                "404":
+                    description: not found
+                    content:
+                        application/json:
+                            schema:
+                                $ref: ./model/Error.yml
+                "500":
+                    description: internal error
+                    content:
+                        application/json:
+                            schema:
+                                $ref: ./model/Error.yml

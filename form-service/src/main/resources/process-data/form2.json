@@ -1,0 +1,71 @@
+{
+  "processId": "WIRE_SAWING",
+  "processDescription": "Wire Sawing",
+  "processDataList": [
+    {
+      "id": "mc_no",
+      "label": "MC No",
+      "type": "QRCODE",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "alignment_inspection",
+      "label": "90⁰ alignment In spec.(< 3’)",
+      "type": "TICKBOX",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "mc_setting_confirmed",
+      "label": "Mc setting confirmed",
+      "type": "TICKBOX",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "process_abnormality",
+      "label": "Process Abnormality",
+      "type": "OPTIONS",
+      "option": [
+        {
+          "value": "Y",
+          "displayFields": [
+            {
+              "id": "remark",
+              "label": "Remark",
+              "type": "STRING",
+              "isMultiParameter": false
+            }
+          ]
+        },
+        {
+          "value": "N",
+          "displayFields": [
+          ]
+        }
+      ],
+      "isMultiParameter": false
+    }
+  ],
+  "inputParameter": [
+    {
+      "id": "workOrderId",
+      "label": "WO No.",
+      "type": "BARCODE",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "containerId",
+      "label": "Jig No.",
+      "type": "QRCODE",
+      "option": [],
+      "isMultiParameter": false
+    }
+  ],
+  "requestInfo": {
+    "function": "saw",
+    "method": "PUT"
+  }
+}

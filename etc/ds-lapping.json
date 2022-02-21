@@ -1,0 +1,126 @@
+{
+  "processId": "DS_LAPPING_2",
+  "processDescription": "DS Lapping-2",
+  "processDataList": [
+    {
+      "id": "mc_no",
+      "label": "Mc No.",
+      "type": "QRCODE",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "coolant_density",
+      "label": "Coolant density (5% Brix)",
+      "type": "TICKBOX",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "table_flatness",
+      "label": "Table flatness (<5u)",
+      "type": "TICKBOX",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "table_dressing",
+      "label": "Table Dressing",
+      "type": "OPTIONS",
+      "option": [
+        {
+          "value": "Y",
+          "displayFields": []
+        },
+        {
+          "value": "N",
+          "displayFields": []
+        }
+      ],
+      "isMultiParameter": false
+    },
+    {
+      "id": "program",
+      "label": "Program No.",
+      "type": "STRING",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "ttv",
+      "label": "Thickness (1.80 ± 0.01mm)",
+      "option": [],
+      "isMultiParameter": false,
+      "type": "VARIATION",
+      "group": {
+        "sendFlat": true,
+        "fields": [
+          {
+            "id": "thickness_1",
+            "type": "NUMBER"
+          },
+          {
+            "id": "thickness_2",
+            "type": "NUMBER"
+          },
+          {
+            "id": "thickness_3",
+            "type": "NUMBER"
+          },
+          {
+            "id": "thickness_4",
+            "type": "NUMBER"
+          },
+          {
+            "id": "thickness_5",
+            "type": "NUMBER"
+          }
+        ]
+      }
+    },
+    {
+      "id": "slice_cosmetics",
+      "label": "Slice Cosmetics (No abnormality)",
+      "type": "OPTIONS",
+      "option": [
+        {
+          "value": "Y",
+          "displayFields": []
+        },
+        {
+          "value": "N",
+          "displayFields": [
+            {
+              "id": "remark",
+              "label": "Remark",
+              "type": "STRING",
+              "isMultiParameter": false
+            }
+          ]
+        }
+      ],
+      "isMultiParameter": false
+    }
+  ],
+  "inputParameter": [
+    {
+      "id": "workOrderId",
+      "label": "WO No.",
+      "type": "BARCODE",
+      "option": [],
+      "isMultiParameter": false
+    },
+    {
+      "id": "containerId",
+      "label": "Basket No.",
+      "type": "QRCODE",
+      "option": [],
+      "isMultiParameter": false
+    }
+  ],
+  "printResult": false,
+  "requestInfo": {
+    "function": "lapp",
+    "method": "PUT"
+  }
+}
